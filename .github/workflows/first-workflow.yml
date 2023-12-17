@@ -10,3 +10,10 @@ jobs:
         run: |
            echo "Good luck!"
            echo "Goodbye!"
+  deploy:
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: print greetings
+        run: echo "deployed"
+  
